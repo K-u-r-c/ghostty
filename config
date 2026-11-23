@@ -1,0 +1,46 @@
+# Ghostty ustawiony tak, żeby wyglądał jak Alacritty (~/.config/alacritty/alacritty.toml)
+# Sprawdzenie: ghostty +validate-config
+
+# --- czcionka: Alacritty bierze systemowe "monospace" (fc-match -> Noto Sans Mono), 11.25 pt
+font-family = Noto Sans Mono
+font-size = 11.25
+
+# --- kolory: tło/tekst z alacritty.toml, reszta palety = domyślne Alacritty
+background = #000000
+foreground = #d8d8d8
+
+palette = 0=#181818
+palette = 1=#ac4242
+palette = 2=#90a959
+palette = 3=#f4bf75
+palette = 4=#6a9fb5
+palette = 5=#aa759f
+palette = 6=#75b5aa
+palette = 7=#d8d8d8
+palette = 8=#6b6b6b
+palette = 9=#c55555
+palette = 10=#aac474
+palette = 11=#feca88
+palette = 12=#82b8c8
+palette = 13=#c28cb8
+palette = 14=#93d3c3
+palette = 15=#f8f8f8
+
+# --- okno: przezroczystość jak w Alacritty, bez paska tytułu i bez marginesów
+background-opacity = 0.95
+window-decoration = none
+window-padding-x = 0
+window-padding-y = 0
+resize-overlay = never
+
+# --- kursor: pełny blok bez mrugania (Alacritty domyślnie)
+cursor-style = block
+cursor-style-blink = false
+# integracja z shellem zostaje (np. skakanie między promptami), ale nie zmienia kursora na kreskę
+shell-integration-features = no-cursor
+
+# --- zamykanie: pytanie robi wofi z killactive.sh (Super+W), więc bez drugiego okienka od Ghostty
+confirm-close-surface = false
+
+# --- Shift+Enter wysyła Esc+Enter (nowa linia w TUI typu Claude Code), jak w Alacritty
+keybind = shift+enter=text:\x1b\r
