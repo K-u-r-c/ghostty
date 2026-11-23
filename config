@@ -42,5 +42,5 @@ shell-integration-features = no-cursor
 # --- zamykanie: pytanie robi wofi z killactive.sh (Super+W), więc bez drugiego okienka od Ghostty
 confirm-close-surface = false
 
-# --- Shift+Enter wysyła Esc+Enter (nowa linia w TUI typu Claude Code), jak w Alacritty
-keybind = shift+enter=text:\x1b\r
+# --- Shift+Enter bez własnego skrótu: Ghostty obsługuje protokół klawiatury Kitty, więc
+# Claude Code (nowa linia) i nvim (jupynvim: uruchom komórkę) same rozpoznają Shift+Enter
